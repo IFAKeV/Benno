@@ -1,6 +1,6 @@
-Anleitung 
+**Anleitung** 
 
-PowerShell als Administrator öffnen
+**PowerShell als Administrator öffnen**
 
 PowerShell Skript zulassen:
 Get-ExecutionPolicy > Set-ExecutionPolicy RemoteSigned > J > Get-ExecutionPolicy = RemoteSigned
