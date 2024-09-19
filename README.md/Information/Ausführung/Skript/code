@@ -1,11 +1,11 @@
 # SMTP-Einstellungen
 $smtpServer = "smtp.ionos.de"
-$smtpFrom = "raifi@ifak-bochum.de"
-$smtpTo = "edv@ifak-bochum.de"
-$smtpUser = " raifi@ifak-bochum.de "  # Falls dein SMTP-Server Authentifizierung erfordert
+$smtpFrom = "Deine Email"
+$smtpTo = "Empfänger Mail"
+$smtpUser = "Deine Email"  # Falls dein SMTP-Server Authentifizierung erfordert
 
 # Verschlüsseltes Passwort aus Datei laden und entschlüsseln
-$securePassword = Get-Content "C:\password.txt" | ConvertTo-SecureString
+$securePassword = Get-Content "C:\Pfad\zu\password.txt" | ConvertTo-SecureString
 $credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $smtpUser, $securePassword
 $smtpPass = $credential.GetNetworkCredential().Password
 
@@ -19,11 +19,11 @@ $freeSpaceGB = [math]::round($drive.Free / 1GB, 2)
 $totalSpaceGB = [math]::round(($drive.Used + $drive.Free) / 1GB, 2)
 
 # Schwellenwert für die Benachrichtigung (10 GB)
-$threshold = 150
+$threshold = 10
 
 if ($freeSpaceGB -lt $threshold) {
     # Wenn der freie Speicherplatz unter 10 GB fällt, sende eine E-Mail
-    $smtpSubject = "Warnung: Weniger als 150 GB auf Laufwerk C: auf $computerName"
+    $smtpSubject = "Warnung: Weniger als 10 GB auf Laufwerk C: auf $computerName"
     $smtpBody = @"
 Das Laufwerk C: auf dem Computer $computerName (Seriennummer: $serialNumber) hat nur noch $freeSpaceGB GB freien Speicherplatz von insgesamt $totalSpaceGB GB.
 "@
@@ -38,7 +38,7 @@ Das Laufwerk C: auf dem Computer $computerName (Seriennummer: $serialNumber) hat
     $smtp.EnableSsl = $true
     $smtp.Credentials = New-Object System.Net.NetworkCredential($smtpUser, $smtpPass)
 
-    try {
+     try {
         $smtp.Send($message)
         Write-Host "E-Mail wurde gesendet."
     } catch {
