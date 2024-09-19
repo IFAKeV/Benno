@@ -1,3 +1,11 @@
+**Anleitung** 
+
+**PowerShell als Administrator öffnen**
+
+PowerShell Skript zulassen:
+Get-ExecutionPolicy > Set-ExecutionPolicy RemoteSigned > J > Get-ExecutionPolicy = RemoteSigned
+(Falls Sie die Einstellung eines Tages auf Standard zurücksetzen wollen, verwenden Sie in einer Admin-PowerShell den Befehl: Get-ExecutionPolicy Default)
+
 Schritt 1: Passwort einmalig verschlüsseln und speichern
 Verwenden Sie das folgende Skript, um Ihr Passwort zu verschlüsseln und in einer Datei zu speichern:
 
@@ -10,15 +18,6 @@ $securePassword | ConvertFrom-SecureString | Set-Content "C:\Pfad\zu\password.tx
 
 - Pfad : Ersetzen C:\Pfad\zu\password.txtdurch den gewünschten Speicherort.
 - Dies speichert das Passwort verschlüsselt in der Datei password.txt.
-
-
-**Anleitung** 
-
-**PowerShell als Administrator öffnen**
-
-PowerShell Skript zulassen:
-Get-ExecutionPolicy > Set-ExecutionPolicy RemoteSigned > J > Get-ExecutionPolicy = RemoteSigned
-(Falls Sie die Einstellung eines Tages auf Standard zurücksetzen wollen, verwenden Sie in einer Admin-PowerShell den Befehl: Get-ExecutionPolicy Default)
 
 Das Skript abspeichern mit der Endung „ps1“
 
