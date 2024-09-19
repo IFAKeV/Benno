@@ -1,13 +1,14 @@
 Schritt 1: Passwort einmalig verschlüsseln und speichern
 Verwenden Sie das folgende Skript, um Ihr Passwort zu verschlüsseln und in einer Datei zu speichern:
 
-(#Passwort eingeben und verschlüsseln
+#Passwort eingeben und verschlüsseln
 $securePassword = Read-Host "Bitte gib dein Email-Passwort ein" -AsSecureString
-#Passwort verschlüsselt in eine Datei speichern
-$securePassword | ConvertFrom-SecureString | Set-Content "C:\Pfad\zu\password.txt")
 
--Pfad : Ersetzen C:\Pfad\zu\password.txtdurch den gewünschten Speicherort.
--Dies speichert das Passwort verschlüsselt in der Datei password.txt.
+#Passwort verschlüsselt in eine Datei speichern
+$securePassword | ConvertFrom-SecureString | Set-Content "C:\Pfad\zu\password.txt"
+
+- Pfad : Ersetzen C:\Pfad\zu\password.txtdurch den gewünschten Speicherort.
+- Dies speichert das Passwort verschlüsselt in der Datei password.txt.
 
 
 **Anleitung** 
