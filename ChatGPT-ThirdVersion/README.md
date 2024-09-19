@@ -14,7 +14,7 @@ Schritt 2: Ereignisquelle registrieren
 
 Führen Sie einmalig als Administrator aus:
 
-New-EventLog -LogName "Application" -Source "DiskSpaceMonitor"
+`New-EventLog -LogName "Application" -Source "DiskSpaceMonitor"`
 
 Schritt 3: Task im Task Scheduler erstellen
 
