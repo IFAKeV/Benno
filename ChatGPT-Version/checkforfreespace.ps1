@@ -1,8 +1,8 @@
 # SMTP-Einstellungen
-$smtpServer = "smtp.ionos.de"
-$smtpFrom = "raifi@ifak-bochum.de"
-$smtpTo = "edv@ifak-bochum.de"
-$smtpUser = "raifi@ifak-bochum.de"
+$smtpServer = "smtp"
+$smtpFrom = "@"
+$smtpTo = "@"
+$smtpUser = "@"
 
 # Sicheres Laden des Passworts aus einer verschlüsselten Datei
 $securePassword = Get-Content "C:\Path\To\EncryptedPassword.txt" | ConvertTo-SecureString
