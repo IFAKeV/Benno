@@ -1,9 +1,12 @@
+Passwort verschlüsseln
+
 # Passwort eingeben und verschlüsseln
 $securePassword = Read-Host "Bitte gib dein Email-Passwort ein" -AsSecureString
 
 # Passwort verschlüsselt in eine Datei speichern
 $securePassword | ConvertFrom-SecureString | Set-Content "C:\Pfad\zu\password.txt"
 
+Skript
 
 # SMTP-Einstellungen
 $smtpServer = "smtp.ionos.de"
