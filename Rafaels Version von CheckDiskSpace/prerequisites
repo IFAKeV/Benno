@@ -1,0 +1,5 @@
+# Passwort eingeben und verschlüsseln
+$securePassword = Read-Host "Email-Passwort eingeben" -AsSecureString
+
+# Passwort verschlüsselt in einer Datei speichern
+$securePassword | ConvertFrom-SecureString | Set-Content "C:\IFAK\password.md5"
