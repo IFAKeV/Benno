@@ -48,6 +48,10 @@ Rechtsklick auf die Ansicht > "Aufgabe an Ereignis binden...".
 Wählen Sie "E-Mail senden" als Aktion.
 Konfigurieren Sie die E-Mail-Einstellungen.
 
+Es gibt Gründe, wieso diese Funktion zwar noch vorhanden, aber offen als "veraltet" betitelt ist.
+So, wie ich es sehe, kann sie nicht per SSL  und Authetifizierungsdaten mit einem SMTP-Server sprechen. Schade Schokolade!
+
+
 Vorteile dieser Lösung:
 
 Einfachheit: Das PowerShell-Skript ist sehr kurz und fokussiert.
