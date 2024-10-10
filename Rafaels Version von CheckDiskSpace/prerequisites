@@ -1,5 +1,22 @@
+# PowerShell Skript zulassen: 
+ 
+Set-ExecutionPolicy RemoteSigned 
+# (mit "J" bestätigen)
+# Kontrolle mit: 
+Get-ExecutionPolicy
+
+# Zurücksetzen: Get-ExecutionPolicy Default
+
 # Passwort eingeben und verschlüsseln
 $securePassword = Read-Host "Email-Passwort eingeben" -AsSecureString
 
 # Passwort verschlüsselt in einer Datei speichern
 $securePassword | ConvertFrom-SecureString | Set-Content "C:\IFAK\password.md5"
+
+# „Windows + r“ zusammen drücken -> „taskschd.msc“ eingeben (Unter Windows 11 „Taskplaner“)
+
+# Unter Aktion > Aufgabe erstellen > 
+# Den Haken setzen bei "Unabhängig von der Benutzeranmeldung Ausführung" klicken >
+# Reiter Trigger > Wöchentlich >
+# Reiter Action > Programm/Skript: "powershell.exe" einfügen >
+# Argumente: C:\IFAK\CheckDiskSpace.ps1 > Starten in: C:\IFAK\
