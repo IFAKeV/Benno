@@ -17,7 +17,7 @@ Powershell als Administrator ausführen.
 
 `Set-ExecutionPolicy RemoteSigned` mit J bestätigen um die Ausführung von Skripten zuzulassen
 
-`Get-ExecutionPolicy` um den geänderten Wert abzufragen. Sollte RemoteSigned" ausgeben
+`Get-ExecutionPolicy` um den geänderten Wert abzufragen. Sollte "RemoteSigned" ausgeben
 
 (Falls Sie die Einstellung eines Tages auf Standard zurücksetzen wollen, verwenden Sie in einer Admin-PowerShell den Befehl: Get-ExecutionPolicy Default)
 
