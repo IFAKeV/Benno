@@ -8,7 +8,11 @@ Schritt 1: PowerShell-Skript erstellen
 
 Erstellen Sie ein einfaches PowerShell-Skript (Check-DiskSpace.ps1):
 
+PowerShell Skript zulassen: 
 
+Get-ExecutionPolicy > Set-ExecutionPolicy RemoteSigned > J > Get-ExecutionPolicy = RemoteSigned 
+
+(Falls Sie die Einstellung eines Tages auf Standard zurücksetzen wollen, verwenden Sie in einer Admin-PowerShell den Befehl: Get-ExecutionPolicy Default)
 
 Schritt 2: Ereignisquelle registrieren
 
