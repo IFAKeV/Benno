@@ -11,7 +11,7 @@ Get-ExecutionPolicy
 $securePassword = Read-Host "Email-Passwort eingeben" -AsSecureString
 
 # Passwort verschlüsselt in einer Datei speichern
-$securePassword | ConvertFrom-SecureString | Set-Content "C:\IFAK\password.md5"
+$securePassword | ConvertFrom-SecureString | Set-Content "C:\IFAK\password.hash"
 
 # „Windows + r“ zusammen drücken -> „taskschd.msc“ eingeben (Unter Windows 11 „Taskplaner“)
 
